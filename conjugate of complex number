@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+class ComplexNumber
+{
+    int real, imaginary;
+    public:
+   
+    void read(){
+        cout<<"\n enter real part";
+        cin>>real;
+        cout<<"\n enter imaginary part";
+        cin>>imaginary;
+    }
+    void display(){
+        if (imaginary<0){
+            cout<<real<<imaginary<<"i";
+        }
+        else{
+            cout<<real<<"+"<<imaginary<<"i";
+            
+        }
+            cout<<"\nconjugate is \n";
+            
+        
+        if(imaginary>0){
+             cout<<real<<(imaginary*-1)<<"i";
+        }
+        else{
+            cout<<real<<"+"<<(imaginary*-1)<<"i";}
+        
+    };
+};
+int main(){
+    ComplexNumber cl;
+    cl.read();
+    cl.display();
+    return 0;
+
+}
